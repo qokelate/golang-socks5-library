@@ -8,7 +8,7 @@ import (
 	"net/http"
 
 	"github.com/miekg/dns"
-	"github.com/txthinking/socks5"
+	"github.com/qokelate/golang-socks5-library"
 )
 
 func ExampleServer() {

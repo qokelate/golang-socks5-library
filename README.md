@@ -2,8 +2,8 @@
 
 [中文](README_ZH.md)
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/txthinking/socks5)](https://goreportcard.com/report/github.com/txthinking/socks5)
-[![GoDoc](https://godoc.org/github.com/txthinking/socks5?status.svg)](https://godoc.org/github.com/txthinking/socks5)
+[![Go Report Card](https://goreportcard.com/badge/github.com/qokelate/golang-socks5-library)](https://goreportcard.com/report/github.com/qokelate/golang-socks5-library)
+[![GoDoc](https://godoc.org/github.com/qokelate/golang-socks5-library?status.svg)](https://godoc.org/github.com/qokelate/golang-socks5-library)
 
 [🗣 News](https://t.me/s/txthinking_news)
 [🩸 Youtube](https://www.youtube.com/txthinking)
@@ -18,7 +18,7 @@ Goals: KISS, less is more, small API, code is like the original protocol.
 ### Install
 
 ```
-$ go get github.com/txthinking/socks5
+$ go get github.com/qokelate/golang-socks5-library
 ```
 
 ### Struct is like concept in protocol
