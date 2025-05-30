@@ -1,4 +1,4 @@
-module github.com/txthinking/socks5
+module github.com/qokelate/golang-socks5-library
 
 go 1.16
 

@@ -128,11 +128,8 @@ func (c *Client) Read(b []byte) (int, error) {
 	return n, nil
 }
 
-func (c *Client) Write(b []byte) (int, error) {
-	if c.UDPConn == nil {
-		return c.TCPConn.Write(b)
-	}
-	a, h, p, err := ParseAddress(c.Dst)
+func (c *Client) UdpWrite(dst string, b []byte) (int, error) {
+	a, h, p, err := ParseAddress(dst)
 	if err != nil {
 		return 0, err
 	}
@@ -149,6 +146,14 @@ func (c *Client) Write(b []byte) (int, error) {
 		return 0, errors.New("not write full")
 	}
 	return len(b), nil
+}
+
+func (c *Client) Write(b []byte) (int, error) {
+	if c.UDPConn == nil {
+		return c.TCPConn.Write(b)
+	}
+
+	return c.UdpWrite(c.Dst, b)
 }
 
 func (c *Client) Close() error {
